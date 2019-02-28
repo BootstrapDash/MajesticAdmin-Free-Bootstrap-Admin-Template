@@ -1,0 +1,69 @@
+/* Icons */
+
+.icons-list {
+  border-left: 1px solid $border-color;
+  border-top: 1px solid $border-color;
+  >div {
+    background: $white;
+    border-bottom: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    @include display-flex;
+    @include align-items(center);
+    padding:15px 15px;
+    font-weight: 400;
+    font-size: $default-font-size;
+
+    i {
+      display: inline-block;
+      font-size: 20px;
+      width: 40px;
+      text-align: left;
+      color: theme-color(primary);
+    }
+  }
+}
+
+.icon-in-bg {
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  @include display-flex();
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+.icon-lg {
+  font-size: 2.5rem;
+}
+
+.icon-md {
+  font-size: 1.875rem;
+}
+
+.icon-sm {
+  font-size: 1rem;
+}
+
+/*icon boxes*/
+@each $color, $value in $theme-colors {
+  .icon-box-#{$color} {
+    width: 2.812rem;
+    height: 2.812rem;
+    border-radius: 5px;
+    line-height: 2.812rem;
+    text-align: center;
+    background: $value;
+    i {
+      color: white;
+      font-size: 1.25rem;
+    }
+    &.icon-box-lg {
+      width: 3.75rem;
+      height: 3.75rem;
+      line-height: 3.75rem;
+      i {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}

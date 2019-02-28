@@ -1,0 +1,144 @@
+/* Lists */
+
+ul,
+ol,
+dl {
+  padding-left: 1rem;
+  font-size: $default-font-size;
+  li {
+    line-height: 1.8;
+  }
+}
+
+.list-ticked,
+.list-arrow,
+.list-star {
+  list-style: none;
+  padding: 0;
+  li {
+    padding-left: 1.5rem;
+    &:before {
+      font-family: "Material Design Icons";
+      margin-left: -1.5rem;
+      width: 1.5rem;
+      margin-right: .5rem;
+    }
+  }
+}
+
+.list-ticked {
+  li {
+    &:before {
+      content: '\F12D';
+      color: theme-color(danger);
+    }
+  }
+}
+
+.list-arrow {
+  li {
+    &:before {
+      content: '\F142';
+      color: theme-color(success);
+    }
+  }
+}
+
+.list-star {
+  li {
+    &:before {
+      content: '\F4CE';
+      color: theme-color(warning);
+    }
+  }
+}
+
+.solid-bullet-list {
+  position: relative;
+  padding-left: 0;
+  .rtl & {
+    padding-right: 0;
+  }
+  li {
+    position: relative;
+    list-style-type: none;
+    padding-left: 25px;
+    line-height: 1;
+    padding-bottom: 2.125rem;
+    * {
+      line-height: .8;
+    }
+    &:before,
+    &:after {
+      content:"";
+      position: absolute;
+    }
+    &:before {
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background: theme-color(primary);
+      z-index: 1;
+    }
+  }
+  &:after {
+    content: "";
+    border: 1px solid $border-color;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 4px;
+    z-index: 0;
+  }
+}
+
+.bullet-line-list {
+  padding-left: 30px;
+  position: relative;
+  list-style-type: none;
+  .rtl & {
+    padding-left: unset;
+    padding-right: 30px;
+  }
+
+  li {
+    position: relative;
+
+    &:before {
+      width: 15px;
+      height: 15px;
+      left: -30px;
+      top: 0;
+      border: 4px solid theme-color(primary);
+      margin-right: 15px;
+      z-index: 2;
+      background: color(white);
+
+      .rtl & {
+        left: unset;
+        right: -45px;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      border-radius: 100%;
+    }
+  }
+
+  &:after {
+    content: "";
+    border: 1px solid $border-color;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 7px;
+    .rtl & {
+      left: unset;
+      right: 7px;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+/* Cards */
+
+.card {
+  box-shadow: $card-box-shadow;
+  -webkit-box-shadow: $card-box-shadow;
+  -moz-box-shadow: $card-box-shadow;
+  -ms-box-shadow: $card-box-shadow;
+  .card-body {
+    padding: $card-padding-y $card-padding-x;
+    + .card-body {
+      padding-top: 1rem;
+    }
+  }
+  .card-title {
+    color: $card-title-color;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: .875rem;
+    font-weight: bold; 
+  }
+  .card-subtitle {
+    @extend .text-gray;
+    font-weight: 400;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+  
+  }
+  .card-description {
+    margin-bottom: .875rem;
+    font-weight: 400;
+    color: $card-description-color;
+  }
+  &.card-outline-success {
+		border: 1px solid theme-color("success");
+	}
+	&.card-outline-primary {
+		border: 1px solid theme-color("primary");
+	}
+	&.card-outline-warning {
+		border: 1px solid theme-color("warning");
+	}
+	&.card-outline-danger {
+		border: 1px solid theme-color("danger");
+	}
+	&.card-rounded {
+		@include border-radius(5px);
+	}
+
+  &.card-faded {
+    background: #b5b0b2;
+    border-color: #b5b0b2;
+  }
+  &.card-circle-progress {
+    color: $white;
+    text-align: center;
+  }
+  &.card-img-holder {
+    position: relative;
+    .card-img-absolute {
+      position: absolute;
+      top:0;
+      right: 0;
+      height: 100%;
+    }
+  }
+  &.card-weather {
+    .weather-daily {
+      .weather-day {
+        opacity: .5;
+        font-weight: 900;
+      }
+      i {
+        font-size: 20px;
+      }
+      .weather-temp {
+        margin-top: .5rem;        
+        margin-bottom: 0;
+        opacity: .5;
+        font-size: .75rem;
+      }
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .card-inverse-#{$color} {
+    @include card-inverse-variant(rgba(theme-color($color), .2), theme-color-level($color, 1), theme-color-level($color, 3));
+  }
+}

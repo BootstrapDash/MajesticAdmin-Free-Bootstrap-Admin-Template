@@ -1,0 +1,112 @@
+/* Demo Styles */
+// Add spacing to Boostrap components for demo purpose
+.template-demo {
+  > .btn {
+    @extend .mt-3;
+    @extend .mr-2;
+  }
+
+  > .btn-group,
+  >  .btn-group-vertical {
+    @extend .mt-2;
+    @extend .mr-2;
+  }
+
+  .progress {
+    margin-top: 1.5rem;
+  }
+
+  > h2,
+   > h3,
+   > h4,
+   > h5,
+   > h6,
+  > h1 {
+    border-top: 1px solid $border-color;
+    padding: 0.5rem 0 0;
+  }
+
+  > .dropdown {
+    display: inline-block;
+    @extend .mr-2;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.documentation {
+  padding-top: 0;
+  max-width: 100%;
+  .content-wrapper {
+    padding-top: 0;
+    min-height: calc(100vh - #{$footer-height});
+  }
+}
+
+.doc-header {
+  position: fixed;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  z-index: 2;
+  background: $content-bg;
+}
+
+.doc-content {
+  padding-top: 157px;
+}
+
+.dashboard-chart-legend {
+  list-style-type: none;
+  padding-left: 0;
+  li {
+    display: inline;
+    span {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 7px;
+    }
+    &:not(:first-child) {
+      span {
+        margin-left: 25px;
+        @media(max-width: 576px) {
+          margin-left: 13px;
+        }
+      }
+    }
+  }
+}
+
+.dashboard-tabs {
+  .item {
+    border-bottom: 1px solid $border-color;
+    @media (min-width: 577px) {
+      border-bottom: 0;
+    }
+  }
+}
+
+.nav-tabs {
+	border: 1px solid $border-color;
+	.nav-link {
+		background: $nav-tabs-link-bg;
+		color: $nav-tabs-link-color;
+		border-radius: 0;
+		border: 1px solid $border-color;
+		padding: 1rem 1.5rem .2rem 1.5rem;
+		@media (max-width: 767px) {
+			padding: 1rem .5rem .2rem .5rem;
+		}
+	}
+	.nav-item {
+		.nav-link {
+			border: 0;
+			background: transparent;
+			&.active {
+				border: 0;
+				border-bottom: 3px solid #5646ff;
+				color: theme-color(primary);
+			}
+		}
+	}
+}

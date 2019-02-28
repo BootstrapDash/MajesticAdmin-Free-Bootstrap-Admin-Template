@@ -1,0 +1,80 @@
+/* Data Tables */
+
+.dataTables_wrapper {
+  padding-left: 0;
+  padding-right: 0;
+  label {
+    font-size: .8125rem;
+  }
+  select {
+    @extend .form-control;
+    padding: .4rem;
+    outline-offset: -2px;
+  }
+  .dataTables_length {
+    select {
+      margin-left: .25rem;
+      margin-right: .25rem;
+    }
+  }
+  .dataTable {
+    border-collapse: collapse !important; // to override the style given by the dataTable
+    .btn {
+      padding: 0.1rem 1rem;
+      vertical-align: top;
+    }
+    thead {
+      th {
+        border-bottom-width: 0;
+        border: 1px solid rgba(151,151,151,0.18);
+        padding: 1.7rem 0.9375rem;
+        white-space: nowrap;
+      }
+      .sorting,
+      .sorting_asc,
+      .sorting_desc,
+      .sorting_asc_disabled,
+      .sorting_desc_disabled {
+        &:before,
+        &:after {
+          line-height: 2.5;
+          font-family: Material Design Icons;
+          font-size: .65rem;
+        }
+        &:before {
+          content: "\F05D";
+          right: 2.4em;
+          bottom: 1.5rem;
+        }
+        &:after {
+          content: "\F045";
+          right: 2em;
+          bottom: 1.1rem;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          border: 1px solid rgba(151,151,151,0.18);
+          color: #08113b;
+          white-space: nowrap;
+          font-weight: 300;
+          padding: 1.1rem 0.9375rem;
+        }
+        &:nth-child(odd) {
+          background: rgba(238,238,238,0.57);
+        }
+      }
+    }
+  }
+  .dataTables_paginate {
+    margin-top: 20px;
+  }
+  .dataTables_info {
+    font-size: $default-font-size;
+    @media(max-width: 576px) {
+      margin-bottom: 1rem;
+    }
+  }
+}
