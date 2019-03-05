@@ -127,7 +127,7 @@
           .input-group {
             background: #ececec;
             border-radius: 4px;
-            padding: .75rem;
+            padding: 0 .75rem;
             .form-control,
             .input-group-text {
               background: transparent;
@@ -142,6 +142,7 @@
             }
             .form-control {
               margin-left: .5rem;
+              height: 2.5rem;
               @include placeholder {
                 color: #9b9b9b;
               }
