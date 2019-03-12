@@ -22,6 +22,6 @@ Take a quick glance at the preview of Majestic Admin template [here](http://www.
     Start editing the code as per your requirement
   </li>
   <li>
-    If you wish to customize the template, use the command 'npm install' to install the necessary dependencies. Refer [documentation](http://www.urbanui.com/majestic/template/documentation/documentation.html) for more details on customization.
+    If you wish to customize the template, use the command 'npm install' to install the necessary dependencies. Refer <a href="http://www.urbanui.com/majestic/template/documentation/documentation.html">documentaion</a> for more details on customization.
   </li>
 </ul>
