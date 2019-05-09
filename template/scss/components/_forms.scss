@@ -31,9 +31,6 @@ select {
     border: 0;
     outline: 1px solid $border-color;
     color: $input-placeholder-color;
-    &:focus {
-      outline: 1px solid $border-color;
-    }
     @each $color, $value in $theme-colors {
       &.border-#{$color} {
         outline: 1px solid $value;
@@ -63,4 +60,16 @@ select {
   .file-upload-info {
     background: transparent;
   }
+}
+
+/* :focus states to improve accesibility */
+a:focus, button:focus,
+.btn:focus,
+.form-control:focus,
+input[type=checkbox]:focus,
+input[type=checkbox]:focus + .input-helper::before,
+input[type=radio]:focus,
+input[type=radio]:focus + .input-helper::before,
+select:focus {
+  outline: 3px solid rgba(map-get($theme-colors, 'primary'), 0.24);
 }
