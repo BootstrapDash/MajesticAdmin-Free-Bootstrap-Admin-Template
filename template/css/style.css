@@ -10334,7 +10334,7 @@ pre code {
 }
 
 .form-control::placeholder, .dataTables_wrapper select::placeholder {
-  color: #c9c8c8;
+  color: #777;
   opacity: 1;
 }
 
@@ -20317,7 +20317,7 @@ code {
 
 .input-group-append,
 .input-group-prepend {
-  color: #c9c8c8;
+  color: #777;
   width: auto;
   border: none;
 }
@@ -20326,7 +20326,7 @@ code {
 .input-group-prepend .input-group-text {
   border-color: #f3f3f3;
   padding: 0.875rem 0.75rem;
-  color: #c9c8c8;
+  color: #777;
 }
 
 .form-control, .dataTables_wrapper select {
@@ -20343,7 +20343,7 @@ select.form-control, .dataTables_wrapper select {
   padding: .4375rem .75rem;
   border: 0;
   outline: 1px solid #f3f3f3;
-  color: #c9c8c8;
+  color: #777;
 }
 
 select.form-control:focus, .dataTables_wrapper select:focus {
@@ -21003,7 +21003,7 @@ dl li {
 }
 
 .auth .auth-form-light select {
-  color: #c9c8c8;
+  color: #777;
 }
 
 .auth .auth-form-light .input-group .form-control:focus, .auth .auth-form-light .input-group .dataTables_wrapper select:focus, .dataTables_wrapper .auth .auth-form-light .input-group select:focus, .auth .auth-form-light .input-group .form-control:active, .auth .auth-form-light .input-group .dataTables_wrapper select:active, .dataTables_wrapper .auth .auth-form-light .input-group select:active {
