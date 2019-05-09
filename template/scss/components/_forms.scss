@@ -21,6 +21,10 @@
   font-size: $input-font-size;
 }
 
+.form-control-lg {
+  font-size: $input-font-size-lg;
+}
+
 select {
   &.form-control {
     padding: .4375rem .75rem;
