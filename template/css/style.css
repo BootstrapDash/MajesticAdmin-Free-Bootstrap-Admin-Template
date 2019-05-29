@@ -8643,7 +8643,7 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -10513,9 +10513,10 @@ textarea.form-control {
 
 .was-validated .form-control:valid ~ .valid-feedback, .was-validated .dataTables_wrapper select:valid ~ .valid-feedback, .dataTables_wrapper .was-validated select:valid ~ .valid-feedback,
 .was-validated .form-control:valid ~ .valid-tooltip,
-.was-validated .dataTables_wrapper select:valid ~ .valid-tooltip, .dataTables_wrapper
-.was-validated select:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .dataTables_wrapper select.is-valid ~ .valid-feedback,
-.form-control.is-valid ~ .valid-tooltip, .dataTables_wrapper select.is-valid ~ .valid-tooltip {
+.was-validated .dataTables_wrapper select:valid ~ .valid-tooltip,
+.dataTables_wrapper .was-validated select:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .dataTables_wrapper select.is-valid ~ .valid-feedback,
+.form-control.is-valid ~ .valid-tooltip,
+.dataTables_wrapper select.is-valid ~ .valid-tooltip {
   display: block;
 }
 
@@ -10638,9 +10639,10 @@ textarea.form-control {
 
 .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .dataTables_wrapper select:invalid ~ .invalid-feedback, .dataTables_wrapper .was-validated select:invalid ~ .invalid-feedback,
 .was-validated .form-control:invalid ~ .invalid-tooltip,
-.was-validated .dataTables_wrapper select:invalid ~ .invalid-tooltip, .dataTables_wrapper
-.was-validated select:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .dataTables_wrapper select.is-invalid ~ .invalid-feedback,
-.form-control.is-invalid ~ .invalid-tooltip, .dataTables_wrapper select.is-invalid ~ .invalid-tooltip {
+.was-validated .dataTables_wrapper select:invalid ~ .invalid-tooltip,
+.dataTables_wrapper .was-validated select:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .dataTables_wrapper select.is-invalid ~ .invalid-feedback,
+.form-control.is-invalid ~ .invalid-tooltip,
+.dataTables_wrapper select.is-invalid ~ .invalid-tooltip {
   display: block;
 }
 
@@ -11819,20 +11821,20 @@ input[type="button"].btn-block {
 }
 
 .input-group > .form-control + .form-control, .dataTables_wrapper .input-group > select + .form-control, .dataTables_wrapper .input-group > .form-control + select, .dataTables_wrapper .input-group > select + select,
-.input-group > .form-control + .custom-select, .dataTables_wrapper
-.input-group > select + .custom-select,
-.input-group > .form-control + .custom-file, .dataTables_wrapper
-.input-group > select + .custom-file,
-.input-group > .form-control-plaintext + .form-control, .dataTables_wrapper
-.input-group > .form-control-plaintext + select,
+.input-group > .form-control + .custom-select,
+.dataTables_wrapper .input-group > select + .custom-select,
+.input-group > .form-control + .custom-file,
+.dataTables_wrapper .input-group > select + .custom-file,
+.input-group > .form-control-plaintext + .form-control,
+.dataTables_wrapper .input-group > .form-control-plaintext + select,
 .input-group > .form-control-plaintext + .custom-select,
 .input-group > .form-control-plaintext + .custom-file,
-.input-group > .custom-select + .form-control, .dataTables_wrapper
-.input-group > .custom-select + select,
+.input-group > .custom-select + .form-control,
+.dataTables_wrapper .input-group > .custom-select + select,
 .input-group > .custom-select + .custom-select,
 .input-group > .custom-select + .custom-file,
-.input-group > .custom-file + .form-control, .dataTables_wrapper
-.input-group > .custom-file + select,
+.input-group > .custom-file + .form-control,
+.dataTables_wrapper .input-group > .custom-file + select,
 .input-group > .custom-file + .custom-select,
 .input-group > .custom-file + .custom-file {
   margin-left: -1px;
@@ -15975,7 +15977,7 @@ button.bg-dark:focus {
   z-index: 1;
   pointer-events: auto;
   content: "";
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .m-0 {
@@ -18217,9 +18219,7 @@ select::-moz-focus-inner {
   outline: 0;
 }
 
-input,
-.form-control:focus,
-.dataTables_wrapper select:focus,
+input, .form-control:focus, .dataTables_wrapper select:focus,
 input:focus,
 select:focus,
 textarea:focus,
@@ -18428,18 +18428,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 500;
   line-height: 1;
 }
@@ -18450,33 +18440,27 @@ p {
   line-height: 1.3rem;
 }
 
-h1,
-.h1 {
+h1, .h1 {
   font-size: 2.5rem;
 }
 
-h2,
-.h2 {
+h2, .h2 {
   font-size: 1.875rem;
 }
 
-h3,
-.h3 {
+h3, .h3 {
   font-size: 1.5rem;
 }
 
-h4,
-.h4 {
+h4, .h4 {
   font-size: 1.25rem;
 }
 
-h5,
-.h5 {
+h5, .h5 {
   font-size: 1rem;
 }
 
-h6,
-.h6 {
+h6, .h6 {
   font-size: .937rem;
 }
 
@@ -21882,7 +21866,7 @@ dl li {
 }
 
 .rtl .product-chart-wrapper::-webkit-scrollbar,
-.rtl .settings-panel .tab-content .tab-pane .scroll-wrapper::-webkit-scrollbar,
+.rtl .tab-content .tab-pane .scroll-wrapper::-webkit-scrollbar,
 .rtl .sidebar-fixed .nav::-webkit-scrollbar,
 .rtl .table-responsive::-webkit-scrollbar,
 .rtl ul.chats::-webkit-scrollbar {
@@ -21890,7 +21874,7 @@ dl li {
 }
 
 .rtl .product-chart-wrapper::-webkit-scrollbar-track,
-.rtl .settings-panel .tab-content .tab-pane .scroll-wrapper::-webkit-scrollbar-track,
+.rtl .tab-content .tab-pane .scroll-wrapper::-webkit-scrollbar-track,
 .rtl .sidebar-fixed .nav::-webkit-scrollbar-track,
 .rtl .table-responsive::-webkit-scrollbar-track,
 .rtl ul.chats::-webkit-scrollbar-track {
@@ -21898,7 +21882,7 @@ dl li {
 }
 
 .rtl .product-chart-wrapper::-webkit-scrollbar-thumb,
-.rtl .settings-panel .tab-content .tab-pane .scroll-wrapper::-webkit-scrollbar-thumb,
+.rtl .tab-content .tab-pane .scroll-wrapper::-webkit-scrollbar-thumb,
 .rtl .sidebar-fixed .nav::-webkit-scrollbar-thumb,
 .rtl .table-responsive::-webkit-scrollbar-thumb,
 .rtl ul.chats::-webkit-scrollbar-thumb {

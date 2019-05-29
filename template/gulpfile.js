@@ -67,11 +67,14 @@ gulp.task('sass:watch', function () {
 
 /* inject partials like sidebar and navbar */
 gulp.task('injectPartial', function () {
-  return gulp.src("./**/*.html", { base: "./" })
-    .pipe(injectPartials())
-    .pipe(gulp.dest("."));
-});
-
+    var injPartial1 =  gulp.src("./pages/**/*.html", { base: "./" })
+      .pipe(injectPartials())
+      .pipe(gulp.dest("."));
+    var injPartial2 =  gulp.src("./*.html", { base: "./" })
+      .pipe(injectPartials())
+      .pipe(gulp.dest("."));
+    return merge(injPartial1, injPartial2);
+  });
 
 /* inject Js and CCS assets into HTML */
 gulp.task('injectCommonAssets', function () {
@@ -164,7 +167,16 @@ gulp.task('copyRecursiveVendorFiles', function() {
     return merge(vFile1, vFile2, vFile3, vFile4, vFile5, vFile6);
 });
 
+//Copy essential map files
+gulp.task('copyMapFiles', function() {
+    var map1 = gulp.src('node_modules/bootstrap/dist/js/bootstrap.min.js.map')
+        .pipe(gulp.dest('./vendors/base'));
+    var map2 = gulp.src('node_modules/@mdi/font/css/materialdesignicons.min.css.map')
+        .pipe(gulp.dest('./vendors/mdi/css'));
+    return merge(map1, map2);
+});
+
 /*sequence for building vendor scripts and styles*/
-gulp.task('bundleVendors', gulp.series('clean:vendors','buildBaseVendorStyles','buildBaseVendorScripts','copyRecursiveVendorFiles'));
+gulp.task('bundleVendors', gulp.series('clean:vendors','buildBaseVendorStyles','buildBaseVendorScripts','copyRecursiveVendorFiles', 'copyMapFiles'));
 
 gulp.task('default', gulp.series('serve'));

@@ -22,7 +22,7 @@
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-            <div class="navbar-brand-wrapper d-flex justify-content-center">
+      <div class="navbar-brand-wrapper d-flex justify-content-center">
         <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">  
           <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="logo"/></a>
           <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
@@ -235,6 +235,7 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
+          
           <div class="row">
             <div class="col-md-12 grid-margin">
               <div class="d-flex justify-content-between flex-wrap">
@@ -259,7 +260,23 @@
                   <button type="button" class="btn btn-light bg-white btn-icon mr-3 mt-2 mt-xl-0">
                     <i class="mdi mdi-plus text-muted"></i>
                   </button>
-                  <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+                  <button class="btn btn-primary mt-2 mt-xl-0">Generate report</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" id="proBanner">
+            <div class="col-md-12 grid-margin">
+              <div class="card bg-gradient-primary border-0">
+                <div class="card-body py-3 px-4 d-flex align-items-center justify-content-between flex-wrap">
+                  <p class="mb-0 text-white font-weight-medium">Like what you see? Checkout our premium version for more.</p>
+                  <div class="d-flex">
+                    <a href="https://github.com/Urbanui/MajesticAdmin-Free-Bootstrap-Admin-Template" target="_blank" class="btn btn-outline-light mr-2">Download free version</a>
+                    <a href="http://www.urbanui.com/majestic-admin-pro/template/" target="_blank" class="btn btn-outline-light mr-2 bg-gradient-danger border-0">Upgrade to Pro</a>
+                    <button id="bannerClose" class="btn border-0 p-0">
+                      <i class="mdi mdi-close text-white"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
