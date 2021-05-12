@@ -6,7 +6,7 @@
   "dependencies": {
     "@mdi/font": "^3.6.95",
     "bootstrap": "4.3.1",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "datatables": "^1.10.18",
     "datatables.net-bs4": "^1.10.19",
     "del": "^4.1.1",
