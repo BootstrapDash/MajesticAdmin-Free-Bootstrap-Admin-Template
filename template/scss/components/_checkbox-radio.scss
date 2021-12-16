@@ -50,7 +50,7 @@
           width: 18px;
           height: 18px;
           border-radius: 2px;
-          border: solid theme-color(primary);
+          border: solid $primary;
           border-width: 2px;
           @include transition(all);
           transition-duration: 0s;
@@ -79,7 +79,7 @@
       &:checked {
         +.input-helper {
           &:before {
-            background: theme-color(primary);
+            background: $primary;
             border-width: 0;
           }
           &:after {
@@ -123,7 +123,7 @@
             left: auto;
             right: 0;
           }
-          border: solid theme-color(primary);
+          border: solid $primary;
           border-width: 2px;
           width: 20px;
           height: 20px;
@@ -165,7 +165,7 @@
       &:checked {
         +.input-helper {
           &:before {
-            background: theme-color(primary);
+            background: $primary;
             border-width: 0;
           }
 

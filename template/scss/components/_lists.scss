@@ -30,7 +30,7 @@ dl {
   li {
     &:before {
       content: '\F12D';
-      color: theme-color(danger);
+      color: $danger;
     }
   }
 }
@@ -39,7 +39,7 @@ dl {
   li {
     &:before {
       content: '\F142';
-      color: theme-color(success);
+      color: $success;
     }
   }
 }
@@ -48,7 +48,7 @@ dl {
   li {
     &:before {
       content: '\F4CE';
-      color: theme-color(warning);
+      color: $warning;
     }
   }
 }
@@ -79,7 +79,7 @@ dl {
       width: 10px;
       height: 10px;
       border-radius: 100%;
-      background: theme-color(primary);
+      background: $primary;
       z-index: 1;
     }
   }
@@ -111,7 +111,7 @@ dl {
       height: 15px;
       left: -30px;
       top: 0;
-      border: 4px solid theme-color(primary);
+      border: 4px solid $primary;
       margin-right: 15px;
       z-index: 2;
       background: color(white);

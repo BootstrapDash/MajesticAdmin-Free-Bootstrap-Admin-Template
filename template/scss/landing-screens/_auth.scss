@@ -36,14 +36,14 @@
 		background: transparent;
 		.form-control,
 		.input-group-text {
-			border-color: theme-color(secondary);
+			border-color: $secondary;
 			&:focus,
 			&:active {
-				border-color: theme-color(secondary);
+				border-color: $secondary;
 			}
 		}
 		select {
-			outline-color: theme-color(secondary);
+			outline-color: $secondary;
 		}
 	}
 	&.auth-img-bg {

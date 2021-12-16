@@ -3,13 +3,13 @@
 .template-demo {
   > .btn {
     @extend .mt-3;
-    @extend .mr-2;
+    @extend .me-2;
   }
 
   > .btn-group,
   >  .btn-group-vertical {
     @extend .mt-2;
-    @extend .mr-2;
+    @extend .me-2;
   }
 
   .progress {
@@ -28,7 +28,7 @@
 
   > .dropdown {
     display: inline-block;
-    @extend .mr-2;
+    @extend .me-2;
     margin-bottom: 0.5rem;
   }
 }
@@ -105,8 +105,80 @@
 			&.active {
 				border: 0;
 				border-bottom: 3px solid #5646ff;
-				color: theme-color(primary);
+				color: $primary;
 			}
 		}
 	}
+}
+#proBanner {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+#proBanner {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #000;
+  .card-body-padding {
+    padding-top: .55rem ;
+    padding-bottom: .55rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    @media (max-width: 766px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    }
+  }
+  .buy-now-text {
+    color: $white;
+    @media (max-width: 766px) {
+      font-size: 10px;
+      line-height: 1.5;
+    }
+  }
+  .btn {
+    &.buy-now-btn {
+      background: transparent;
+      color: #88b6ff;
+      border-radius: 10px;
+      // padding: 0.625rem 1.25rem;
+      padding: 1rem 0;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 1rem;
+      @media (max-width: 766px) {
+        min-width: 80px;
+        padding: 1rem .5rem;
+        font-size: 12px;
+      }
+    }
+    &#bannerClose { 
+      i {
+        margin-right: 1rem;
+        font-size: 1.25rem;
+        @media (max-width: 766px) {
+          font-size: 1rem;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    i {
+      font-size: 1.25rem;
+      @media (max-width: 766px) {
+        font-size: 1rem;
+      }
+    }
+  }
+  
+}
+.proBanner-padding-top {
+  padding-top: $buy-nowbanner-padding-top !important;
 }

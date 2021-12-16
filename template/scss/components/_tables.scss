@@ -17,6 +17,7 @@
   td {
     vertical-align: middle;
     line-height: 1;
+    padding: $table-cell-padding;
   }
   td {
     font-size: $default-font-size;
@@ -40,4 +41,10 @@
   &.table-bordered {
     border-top: 1px solid $border-color;
   }
+}
+.table > :not(:last-child) > :last-child > *, .jsgrid .jsgrid-table > :not(:last-child) > :last-child > * {
+  border-bottom-color: $border-color;
+}
+.table > :not(:first-child), .jsgrid .jsgrid-table > :not(:first-child) {
+  border-top: none;
 }

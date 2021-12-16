@@ -13,7 +13,7 @@
   font-weight: 400;
   border-top: 1px solid rgba($black, .06);
   a {
-    color: theme-color(primary);
+    color: $primary;
     font-size: inherit;
   }
   @media (max-width: 991px) {
